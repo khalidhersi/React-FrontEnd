@@ -5,7 +5,9 @@ import vueLogo from "../../assets/images/Vue-logo.png";
 const Nav = () => {
   return (
     <div className="nav">
+      <Link className="nav-menu__item" to="/">
       <img src={vueLogo} alt="vue Logo" className="nav__logo" />
+      </Link>
       <Link className="nav-menu__item" to="/">
         Home
       </Link>
