@@ -13,3 +13,10 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+@media screen and (min-width: 800px){
+  .heading{
+    width: 100%;
+
+}
+}
