@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/React-FrontEnd/static/css/main.ad44b32f.css",
+    "main.js": "/React-FrontEnd/static/js/main.48200e5e.js",
+    "static/js/787.6724fe0c.chunk.js": "/React-FrontEnd/static/js/787.6724fe0c.chunk.js",
+    "static/media/spidermanBanner.jpg": "/React-FrontEnd/static/media/spidermanBanner.8f9d25ffedb5464e9d2b.jpg",
+    "static/media/Vue-logo.png": "/React-FrontEnd/static/media/Vue-logo.fccb1e6e583a5a824007.png",
+    "static/media/kingsmenBanner.jpg": "/React-FrontEnd/static/media/kingsmenBanner.fda257042f8d27f66a98.jpg",
+    "static/media/screamBanner.jpg": "/React-FrontEnd/static/media/screamBanner.07dbab947127415fcd84.jpg",
+    "index.html": "/React-FrontEnd/index.html",
+    "main.ad44b32f.css.map": "/React-FrontEnd/static/css/main.ad44b32f.css.map",
+    "main.48200e5e.js.map": "/React-FrontEnd/static/js/main.48200e5e.js.map",
+    "787.6724fe0c.chunk.js.map": "/React-FrontEnd/static/js/787.6724fe0c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad44b32f.css",
+    "static/js/main.48200e5e.js"
+  ]
+}
