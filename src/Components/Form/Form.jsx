@@ -1,40 +1,35 @@
 import { useState } from "react";
 import "./Form.scss";
 
-// form styles jacked from here
-// https://codepen.io/banunn/pen/AFnal
-
 const Form = () => {
-  const [greeting, setGreeting] = useState({
-    createdBy: "",
-    greeting: "",
-    originCountry: ""
+  const [movie, setMovie] = useState({
+    imageURL: "",
+    movieName: "",
+    rating: ""
   })
 
-  // by default fetch is a get post 
-  //this is how you do a post request
   const handleSubmit = (e) => {
     e.preventDefault()
-    fetch('http://localhost:8080/greeting', {
+    fetch('http://localhost:8080/movie', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(greeting)
+      body: JSON.stringify(movie)
     })
     .then((response) => response.json())
     .then((json => console.log(json)))
-    .catch(err => console.log(err))
+    .catch(error => console.log(error))
     e.target.reset();
   }
 
   return (
     <div className="log-form">
-      <h2>Add A New Greeting</h2>
+      <h2>Add A New Movie</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="your name" onInput={(e) => setGreeting({ ...greeting, createdBy: e.target.value })} />
-        <input type="text" placeholder="greeting" onInput={(e) => setGreeting({ ...greeting, greeting: e.target.value })} />
-        <input type="text" placeholder="origin country" onInput={(e) => setGreeting({ ...greeting, originCountry: e.target.value })} />
+      <input type="text" placeholder="Movie Image URL" onInput={(e) => setMovie({ ...movie, imageURL: e.target.value })} />
+        <input type="text" placeholder="Movie" required onInput={(e) => setMovie({ ...movie, movieName: e.target.value })} />
+        <input type="text" placeholder="Rating Out of 10" onInput={(e) => setMovie({ ...movie, rating: e.target.value })} />
         <button type="submit" className="btn">Submit</button>
       </form>
     </div>

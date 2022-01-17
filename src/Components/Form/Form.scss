@@ -1,13 +1,14 @@
-$blue: rgb(88, 40, 199);
+@import "../../assets/styles/variables";
+
 
 .log-form {
-  width: 40%;
-  min-width: 320px;
-  max-width: 475px;
-  background: #fff;
-  margin: 200px auto;
+  width: 40rem;
+text-align: center;
+  background: rgb(153, 103, 103);
+  margin: 200px 5rem;
   box-shadow: 0px 2px 5px rgba(0,0,0,.25);
-  
+  border-radius: 30px;
+
   form {
     display: block;
     width: 100%;
@@ -16,18 +17,19 @@ $blue: rgb(88, 40, 199);
   
   h2 {
     width: 100%;
-    color: lighten(grey, 20%);
-    font-family: 'open sans condensed';
-    font-size: 1.35em;
+    color: lighten(black, 20%);
+    font-family: 'poppins';
+    font-size: 1.5em;
+    font-weight: 700;
     display: block;
-    background: rgb(46, 46, 46);
+    background: orange;
+    border-radius: 10px;
     width: 100%;
     text-transform: uppercase;
     padding: .75em 1em .75em 1.5em;
     box-shadow:inset 0px 1px 1px fadeout(white, 95%);
     border: 1px solid darken(grey, 5%);
     margin: 0;
-    font-weight: 200;
   }
   
   input {
@@ -39,6 +41,9 @@ $blue: rgb(88, 40, 199);
     border: none;
     border-bottom: 1px solid #eaeaea;
     padding-bottom: 1.25em;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
     color: #757575;
     &:focus {
       outline: none;
@@ -47,17 +52,20 @@ $blue: rgb(88, 40, 199);
   
   .btn {
     display: inline-block;
-    background: $blue;
+    background: orange;
     border: 1px solid darken($blue, 5%);
     padding: .5em 2em;
     color: white;
+
+    width: 85%;
     margin-right: .5em;
     box-shadow: inset 0px 1px 0px fadeout(white, 80%); 
+    font-size: 1.5rem;
     &:hover {
       background: lighten($blue, 5%);
     }
     &:active {
-      background: $blue; 
+      background: orange; 
       box-shadow: inset 0px 1px 1px fadeout(black, 90%); 
     }
     &:focus {
@@ -66,3 +74,13 @@ $blue: rgb(88, 40, 199);
   }
 }
 
+
+@media screen and (min-width: 800px){
+  .log-form {
+    width: 80%;
+    .btn{
+      width: 85%;
+      font-size: 2rem;
+    }
+  }
+}

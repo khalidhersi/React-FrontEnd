@@ -1,6 +1,6 @@
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Dashboard.scss";
-// import GreetingList from "../../components/GreetingList/GreetingList";
+import MovieList from "../../Components/MovieList/MovieList";
 import Form from "../../Components/Form/Form";
 import Home from "../../Components/Home/Home";
 
@@ -8,26 +8,26 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "../../Components/Nav/Nav";
 
 const Dashboard = () => {
-  // const [greetings, setGreetings] = useState([]);
+const [movie, setMovie] = useState([])
 
-  // const getGreetings = () => {
-  //   fetch("http://localhost:8080/greetings")
-  //     .then(res => res.json())
-  //     .then(json => setGreetings(json))
-  //     .catch(err => console.log(err))
-  // }
+  const getMovie = () => {
+    fetch("http://localhost:8080/movielist")
+    .then(response => response.json()
+    .then(result => setMovie(result))
+    .catch(error => console.log(error)))
+  }
 
-  // useEffect(() => {
-  //   getGreetings();
-  // }, [greetings]);
+  useEffect(() => {
+    getMovie();
+  }, [movie])
 
   return (
     <Router>
       <Nav />
       <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="/greetings" element={<GreetingList greetings={greetings} />} /> */}
-        <Route path="/new-greeting" element={<Form />} />
+        <Route path="/" element={<Home movie={movie}/>} />
+        <Route path="/movielist" element={<MovieList movie={movie} />} />
+        <Route path="/new-movie" element={<Form />} />
       </Routes>
     </Router>
   )

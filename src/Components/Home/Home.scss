@@ -1,10 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
 
-
-h1 {
-  font-size: 70px;
-  width: 50%;
-  margin: 200px auto;
+.home{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 100%;
+&__c2a {
+  font-size: 300%;
+  width: 50rem;
+  margin: 2rem auto;
   text-align: center;
   font-family: 'open sans condensed';
+}
+}
+
+@media screen and (min-width: 800px){
+  .home{
+    width: 100%;
+  &__c2a {
+    width: 50%
+  }
+}
 }

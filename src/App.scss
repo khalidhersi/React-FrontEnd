@@ -1,4 +1,10 @@
+@import "./assets/styles/variables";
+
+body{
+  background-color: $background-color;
+}
 *{
   box-sizing:border-box;
   font-family: 'open sans', helvetica, arial, sans;
+  color: #fdfdfd;
 }

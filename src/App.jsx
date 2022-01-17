@@ -3,7 +3,7 @@ import Dashboard from "./Containers/Dashboard/Dashboard";
 
 const App = () => {
   return (
-    <div>
+    <div className="app">
       <Dashboard />
     </div>
   )

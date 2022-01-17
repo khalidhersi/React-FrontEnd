@@ -1,19 +1,21 @@
 import "./Nav.scss";
 import { Link } from "react-router-dom";
+import vueLogo from "../../assets/images/Vue-logo.png";
 
 const Nav = () => {
   return (
     <div className="nav">
+      <img src={vueLogo} alt="vue Logo" className="nav__logo" />
       <Link className="nav-menu__item" to="/">
         Home
       </Link>
 
-      <Link className="nav-menu__item" to="/greetings">
-        Greetings
+      <Link className="nav-menu__item" to="/movielist">
+        Now Showing
       </Link>
 
-      <Link className="nav-menu__item" to="/new-greeting">
-        Add Greeting
+      <Link className="nav-menu__item" to="/new-movie">
+        Add A Favorite Movie
       </Link>
     </div>
   )
