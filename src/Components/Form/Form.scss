@@ -3,14 +3,21 @@
 
 .log-form {
   width: 40rem;
-text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 5em;
   background: rgb(153, 103, 103);
   margin: 200px 5rem;
   box-shadow: 0px 2px 5px rgba(0,0,0,.25);
   border-radius: 30px;
 
   form {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     padding: 2em;
   }
