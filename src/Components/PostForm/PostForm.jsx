@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./Form.scss";
+import "./PostForm.scss";
 
-const Form = () => {
+const PostForm = () => {
   const [movie, setMovie] = useState({
     imageURL: "",
     movieName: "",
@@ -36,4 +36,4 @@ const Form = () => {
   );
 }
 
-export default Form;
+export default PostForm;

@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import "./Dashboard.scss";
 import MovieList from "../../Components/MovieList/MovieList";
-import Form from "../../Components/Form/Form";
+import PostForm from "../../Components/PostForm/PostForm";
 import Home from "../../Components/Home/Home";
+import DeleteForm from "../../Components/DeleteForm/DeleteForm ";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "../../Components/Nav/Nav";
@@ -27,7 +28,8 @@ const [movie, setMovie] = useState([])
       <Routes>
         <Route path="/" element={<Home movie={movie}/>} />
         <Route path="/movielist" element={<MovieList movie={movie} />} />
-        <Route path="/new-movie" element={<Form />} />
+        <Route path="/new-movie" element={<PostForm />} />
+        <Route path="/delete-movie" element={<DeleteForm />} />
       </Routes>
     </Router>
   )

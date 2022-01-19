@@ -19,6 +19,10 @@ const Nav = () => {
       <Link className="nav-menu__item" to="/new-movie">
         Add A Favorite Movie
       </Link>
+
+      <Link className="nav-menu__item" to="/delete-movie">
+        Add A Favorite Movie
+      </Link>
     </div>
   )
 }
